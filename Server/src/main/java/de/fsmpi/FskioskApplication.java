@@ -22,6 +22,7 @@ public class FskioskApplication {
 
 /**
  * This Commandline Runner is for Testing -> should be moved to an Integration Test
+ * TODO: Move CLR to Integration Test
  */
 @Component
 class TestCLR implements CommandLineRunner {
