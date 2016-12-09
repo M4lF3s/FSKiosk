@@ -1,0 +1,28 @@
+<md-card *ngFor="let item of items">
+  <button md-button routerLink="/persons" class="panelwrapper-left" (click)="processItem(item.value)">{{ item.name }}</button>
+  <div class="panelwrapper-right">
+    <span>{{ item.value }}</span>
+  </div>
+</md-card>
+
+<md-card *ngIf="showAddNewItem">
+  <div class="panelwrapper-left">
+    <div class="newItemWrapper">
+      <md-input #price placeholder="Preis" maxlength="5" md-line>
+        <span md-suffix>€</span>
+        <md-hint align="end">
+          {{price.characterCount}} / 5
+        </md-hint>
+      </md-input>
+    </div>
+  </div>
+  <button class="panelwrapper-right" style="background-color: #b0bec5 !important;" md-button (click)="processItem(price.value)" routerLink="/persons">Add</button>
+</md-card>
+
+<span *ngIf="!showAddNewItem" class="app-action" (click)="toggleAddNewItem()">
+  <button md-fab><md-icon>add circle</md-icon></button>
+</span>
+
+<span class="app-action-left">
+  <button md-fab routerLink="/persons"><md-icon>keyboard_arrow_left circle</md-icon></button>
+</span>

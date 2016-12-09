@@ -1,0 +1,41 @@
+md-card {
+  margin: 20px;
+  padding: 0px;
+  height: 80px;
+}
+
+.app-action-left {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.app-action {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.panelwrapper-left {
+  height: 100%;
+  width: 85%;
+  float: left;
+  text-align: left;
+}
+
+.panelwrapper-right {
+  height: 100%;
+  width: 15%;
+  float: right;
+  background-color: #f57c00;
+  line-height: 80px;
+  text-align: center;
+}
+
+.newItemWrapper {
+  top: 10px;
+  left: 20px;
+  position:relative;
+}

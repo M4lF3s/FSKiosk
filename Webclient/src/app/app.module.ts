@@ -7,12 +7,16 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { WebclientRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { PersonpanelComponent } from './personpanel/personpanel.component';
+import { ItempanelComponent } from './itempanel/itempanel.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PersonpanelComponent,
+    ItempanelComponent
   ],
   imports: [
     BrowserModule,

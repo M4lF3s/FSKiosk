@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonpanelComponent } from '../personpanel';
+import { Configuration } from '../app.constants';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: [Configuration]
 })
 export class HomeComponent implements OnInit {
 

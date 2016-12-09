@@ -62,14 +62,14 @@ class TestCLR implements CommandLineRunner {
 		System.out.println("Adding Some Transactions");
 		Person p = new Person("Marcel");
 		Person p2 = new Person("Armin");
-		Person p3 = new Person("Marcel");
+		//Person p3 = new Person("Marcel");
 		Product e = new Product("Kinderriegel", 0.25);
 		Product e2 = new Product("Bier", 0.80);
 		Product e3 = new Product("Kaffee", 0.25);
 
 		personRepository.save(p);
 		personRepository.save(p2);
-		personRepository.save(p3);
+		//personRepository.save(p3);
 
 		productRepository.save(e);
 		productRepository.save(e2);
@@ -77,8 +77,9 @@ class TestCLR implements CommandLineRunner {
 
 		transactionRepository.save(new Transaction(new Date(1472506434), e, p));
 		transactionRepository.save(new Transaction(new Date(1472569536), e2, p2));
-		transactionRepository.save(new Transaction(new Date(1472569537), e3, p3));
-		accountingService.account();
+		transactionRepository.save(new Transaction(new Date(1472569537), e3, p));
+		//accountingService.account();
+		creditCalculationService.calculate();
 
 
 		//abrechnungService.export(1, "export.xlsx");

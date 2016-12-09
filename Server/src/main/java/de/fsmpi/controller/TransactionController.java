@@ -7,8 +7,12 @@ import de.fsmpi.utils.MapUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.socket.TextMessage;
+import org.springframework.web.socket.WebSocketSession;
+import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.util.Date;
 
@@ -17,7 +21,7 @@ import java.util.Date;
  */
 
 @Controller
-public class TransactionController {
+public class TransactionController extends TextWebSocketHandler {
 
     @Autowired
     private PersonRepository personRepository;
@@ -44,7 +48,7 @@ public class TransactionController {
         Gson gson = new Gson();
         System.out.println("JSON: " + gson.toJson(creditCalculationService.getCredits()));
 
-        getTopTenData();
+        //getTopTenData();
 
         return gson.toJson(creditCalculationService.getCredits());
     }

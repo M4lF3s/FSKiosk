@@ -92,4 +92,5 @@ public class CreditCalculationService {
         this.credits.put(t.getPerson().getPersonName(), tmp+t.getProduct().getValue());
         return this.credits;
     }
+
 }

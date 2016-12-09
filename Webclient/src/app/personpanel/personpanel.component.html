@@ -1,0 +1,25 @@
+<md-card *ngFor="let person of persons">
+  <button class="panelwrapper-left" md-button routerLink="/items" (click)="processPerson(person.name)">{{ person.personName }}</button>
+  <div class="panelwrapper-right">
+    <span>{{ person.value }}</span>
+  </div>
+</md-card>
+
+<md-card *ngIf="showAddNewPerson">
+  <div class="panelwrapper-left">
+    <div class="newPersonWrapper">
+      <md-input #nickname placeholder="Nickname" maxlength="20" md-line>
+        <md-hint align="end">
+          {{nickname.characterCount}} / 20
+        </md-hint>
+      </md-input>
+    </div>
+  </div>
+  <button class="panelwrapper-right" style="background-color: #b0bec5 !important;" md-button (click)="addNewPerson(nickname.value)">Add</button>
+</md-card>
+
+
+
+<span *ngIf="!showAddNewPerson" class="app-action" (click)="toggleAddNewPerson()">
+  <button md-fab><md-icon>add circle</md-icon></button>
+</span>

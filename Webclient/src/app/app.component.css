@@ -4,6 +4,7 @@ md-sidenav-layout.m2app-dark {
 
 .app-content {
   padding: 20px;
+  height: 100%;
 }
 
 .app-sidenav {
@@ -35,11 +36,4 @@ md-sidenav-layout.m2app-dark {
   padding: 0;
   text-align: left;
   text-decoration: none;
-}
-
-.app-action {
-  display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
 }
